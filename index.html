@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Interactive card details form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cards">
+      <div class="card-front">
+        <img src="./images/card-logo.svg" alt="logo">
+        <p class="dis-card-num">0000000000000000</p>
+        <div class="name-date-div">
+          <p class="dis-name">Jane Appleseed</p>
+          <div class="month-year-div">
+            <p class="dis-month">00</p>/<p class="dis-year">00</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="dis-cvc">000</p>
+      </div>
+    </div>
+    <div class="form-div">
+      <form id="form">
+        <label for="name">Cardholder Name</label>
+        <input id="name" type="text" placeholder="e.g. Jane Appleseed">
+
+        <label for="card-number">Card Number</label>
+        <input id="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        <span class="card-error">Wrong format, numbers only</span>
+        <div class="date-cvc-div">
+          <div class="date-div">
+            <label for="date">Exp. Date (MM/YY)</label>
+            <div class="m-y-div">
+              <input id="month" type="number" placeholder="MM" min="1" max="12">
+              <input id="year" type="number" placeholder="YY" min="00" max="99">
+              <span class="date-error">Can't be blank</span>
+            </div>
+          </div>
+          <div class="cvc-div">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="number" placeholder="e.g. 123">
+            <span class="cvc-error">Can't be blank</span>
+          </div>
+        </div>
+
+        <input id="submit" type="submit" value="Confirm">
+      </form>
+      <div class="completed">
+        <img src="./images/icon-complete.svg" alt="icon-complete">
+        <p class="bold">Thank you!</p>
+        <p>We've added your card details</p>
+        <button id="finish">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
